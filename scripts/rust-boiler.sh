@@ -1,22 +1,24 @@
+# Z shell execution script
+
 #!/bin/zsh
 
-# Verificar que se haya proporcionado un argumento
+# Checks that an argument has been provided
 if [ $# -eq 0 ]; then
-    echo "Error: Se requiere un nombre de proyecto como argumento."
+    echo "Error: A project name is required as an argument."
     exit 1
 fi
 
-# Obtener el nombre del proyecto del primer argumento
-nombre_proyecto="$1"
+# Get the project name from the first argument
+project_name="$1"
 
-# Crear el proyecto en Rust
-cargo new "$nombre_proyecto"
+# Create the rust project with its name
+cargo new "$project_name"
 
-# Moverse al directorio del proyecto
-cd "$nombre_proyecto" || exit
+# Move to the directory where the project is located
+cd "$project_name" || exit
 
-# Crear el archivo .gitignore y escribir en él
+# Create .gitignore file and write on it.
 echo "/target" > .gitignore
 
-# Mensaje de confirmación
-echo "Proyecto '$nombre_proyecto' creado exitosamente con .gitignore que incluye /target"
+# Confirmation message
+echo "Project '$project_name' successfully created with .gitignore which includes '/target'"
