@@ -13,7 +13,7 @@ First, you need to save the script to a file on your system. Follow these steps:
 1. Open your preferred text editor (for example, `nano`, `nvim` or `code`).
 
 ```sh
-  nvim rust_project_creation.sh
+  nano rust_project_creation.sh
 ```
 
 2. Inside the file, copy the following code.
@@ -73,10 +73,10 @@ chmod +x rust_project_creation.sh
 1. Enter your configuration file (for example, `nano`, `nvim` or `code`).
 
 ```sh
-nvim ~/.zshrc
+nano ~/.zshrc
 ```
 
-2. Add the following alias at the end of the configuration file.
+2. Add the following alias at the end of the configuration file (with the correct path to your script)
 
 ```sh
 alias rust='PATH/TO/YOUR/FILE/rust_project_creation.sh'
