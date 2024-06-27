@@ -40,7 +40,7 @@ Cargo.lock
 *.pdb
 EOL
 
-echo "Project '$project_name' successfully created with .gitignore which includes the specified content."
+echo "Project '$project_name' successfully created with .gitignore."
 ```
 
 3. Close and save the file. 
