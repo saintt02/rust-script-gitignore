@@ -65,7 +65,7 @@ echo "Project '$project_name' successfully created with .gitignore which include
 #### 2 Give permissions to the script
 
 ```sh
-chmod +x rust_boiler.sh
+chmod +x rust_project_creation.sh
 ```
 
 #### 3 Configure the alias for the script in the zsh configuration file
