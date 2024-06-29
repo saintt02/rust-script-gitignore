@@ -4,6 +4,8 @@ This process automates the creation of Rust projects and the configuration of th
 
 The explanation of how to use the script, from saving it to configuring it with an alias in zsh.
 
+## The idea in the future is add more shells, like PowerShell, bash, fish, ksh, csh/tcsh, and many more.
+
 ### Step by Step: Using the Script to Create Projects in Rust with `.gitignore`.
 
 #### 1. Saving the Script
