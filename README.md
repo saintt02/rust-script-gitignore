@@ -4,67 +4,74 @@ This process automates the creation of Rust projects and the configuration of th
 
 The explanation of how to use the script, from saving it to configuring it with an alias in zsh.
 
-## The idea in the future is add more shells, like PowerShell, bash, fish, ksh, csh/tcsh, and many more.
+## Supported Shells
+
+  - zsh
+  - PowerShell
 
 ### Step by Step: Using the Script to Create Projects in Rust with `.gitignore`.
 
 #### 1. Saving the Script
 
-First, you need to save the script to a file on your system. Follow these steps:
+First, you need to save the script to a file on your system, depending on the shell you are running, the extension will be different.
 
-1. Open your preferred text editor (for example, `nano`, `nvim` or `code`).
+1. We are going to create the file with the respective extension. You can use your preferred text editor (for example, nano, vim).
 
-```sh
+For zsh, we will create the file with the .sh extension.
+
+```zsh
   nano rust_project_creation.sh
 ```
 
-2. Inside the file, copy the following code (you can have the explained version in /scripts)
+For PowerShell, we will create the file with the .ps1 extension.
 
-```sh
-#!/bin/zsh
-
-if [ $# -eq 0 ]; then
-    echo "Error: A project name is required as an argument."
-    exit 1
-fi
-
-project_name="$1"
-
-cargo new "$project_name"
-
-cd "$project_name" || exit
-
-cat <<EOL > .gitignore
-debug/
-target/
-Cargo.lock
-**/*.rs.bk
-*.pdb
-EOL
-
-echo "Project '$project_name' successfully created with .gitignore."
+```powershell
+  notepad rust_project_creation.ps1
 ```
+
+2. Inside the file, copy the code of your respective system script. 
+
+- [zsh](https://github.com/devprogq/rust-script-gitignore/tree/main/scripts/zsh)
+- [PowerShell](https://github.com/devprogq/rust-script-gitignore/tree/main/scripts/powershell)
 
 3. Close and save the file. 
 
 #### 2 Give permissions to the script
 
-```sh
+For adding permissions in Linux/MacOS, you need to execute the following command in the terminal.
+
+```zsh
 chmod +x rust_project_creation.sh
 ```
 
-#### 3 Configure the alias for the script in the zsh configuration file
+For adding permissions in Windows, you need to execute the following command in the terminal.
 
-1. Enter your configuration file (for example, `nano`, `nvim` or `code`).
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+```
 
-```sh
+# This command sets the execution policy to Bypass for the current session, allowing the script to be executed. Note that this does not change the execution policy permanently, to do so, you need to insert the command into the $PROFILE environment variable, which will automatically change the execution policy for all sessions. to learn more, see the [documentation](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.4)
+
+#### 3 Configure the alias for the script in the configuration file
+
+1. Enter your configuration file.
+
+```zsh
 nano ~/.zshrc
+```
+
+```powershell
+notepad #PROFILE
 ```
 
 2. Add the following alias at the end of the configuration file (with the correct path to your script)
 
-```sh
+```zsh
 alias rust='PATH/TO/YOUR/FILE/rust_project_creation.sh'
+```
+
+```powershell
+New-Alias rust C:\PATH\TO\YOUR\FILE\rust_creation_project.ps1
 ```
 
 3. Reload the configuration closing and opening the terminal.
@@ -79,4 +86,4 @@ For example, to create a project named my_project:
 rust my_project
 ```
 
-This command will run the script rust_project_creation.sh, which will create the project in Rust and generate a .gitignore file with the specified content.
+This command will run the script rust_project_creation, which will create the project in Rust and generate a .gitignore file with the specified content.
