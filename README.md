@@ -15,13 +15,13 @@ First, you need to save the script to a file on your system, depending on the sh
 
 1. We are going to create the file with the respective extension. You can use your preferred text editor (for example, nano, vim).
 
-- For zsh, we will create the file with the .sh extension.
+- For zsh, we will create the file with the **.sh** extension.
 
 ```zsh
 nano rust_project_creation.sh
 ```
 
-- For PowerShell, we will create the file with the .ps1 extension.
+- For PowerShell, we will create the file with the **.ps1** extension.
 
 ```powershell
 notepad rust_project_creation.ps1
@@ -36,13 +36,13 @@ notepad rust_project_creation.ps1
 
 #### 2 Give permissions to the script
 
-- For adding permissions in Linux/MacOS, you need to execute the following command in the terminal.
+- For adding permissions in **Linux/MacOS**, you need to execute the following command in the terminal.
 
 ```zsh
 chmod +x rust_project_creation.sh
 ```
 
-- For adding permissions in Windows, you need to execute the following command in the terminal.
+- For adding permissions in **Windows**, you need to execute the following command in the terminal.
 
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
@@ -54,13 +54,13 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 
 1. Enter your configuration file.
 
-- For zsh
+- For **zsh**
 
 ```zsh
 nano ~/.zshrc
 ```
 
-- For PowerShell
+- For **PowerShell**
 
 ```powershell
 notepad #PROFILE
@@ -68,13 +68,13 @@ notepad #PROFILE
 
 2. Add the following alias at the end of the configuration file (with the correct path to your script)
 
-- For zsh
+- For **zsh**
 
 ```zsh
 alias rust='PATH/TO/YOUR/FILE/rust_project_creation.sh'
 ```
 
-- For PowerShell
+- For **PowerShell**
 
 ```powershell
 New-Alias rust C:\PATH\TO\YOUR\FILE\rust_creation_project.ps1
@@ -86,7 +86,7 @@ New-Alias rust C:\PATH\TO\YOUR\FILE\rust_creation_project.ps1
 
 You can now use the rust alias to create a new project in Rust with the name you specify. The alias will call the script and pass the project name as an argument.
 
-For example, to create a project named my_project:
+For example, to create a project named *my_project*:
 
 ```sh
 rust my_project
