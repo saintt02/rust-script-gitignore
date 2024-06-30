@@ -27,7 +27,7 @@ nano rust_project_creation.sh
 notepad rust_project_creation.ps1
 ```
 
-2. Inside the file, copy the code of your respective system script. 
+2. Inside the file, copy the code of your respective shell.
 
 - [zsh](https://github.com/devprogq/rust-script-gitignore/tree/main/scripts/zsh/rust_project_creation.sh)
 - [PowerShell](https://github.com/devprogq/rust-script-gitignore/tree/main/scripts/powershell/rust_project_creation.ps1)
