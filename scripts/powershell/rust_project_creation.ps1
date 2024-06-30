@@ -1,5 +1,3 @@
-# PowerShell script to create a Rust project with a custom .gitignore file
-
 param (
     [string]$projectName
 )
