@@ -1,5 +1,7 @@
 # Script for creating a project with cargo and a gitignore file for Rust
 
+### Powershell script is not working, need to readjust the code
+
 This process automates the creation of Rust projects and the configuration of the .gitignore file, improving your workflow and efficiency while working with Rust.
 
 ### Supported Shells
